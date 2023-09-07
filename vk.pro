@@ -2,6 +2,7 @@ TEMPLATE = app
 CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
+INCLUDEPATH += ../curl-8.2.1_5-win64-mingw/include
 
 SOURCES += main.cpp \
     src/api.cpp \
@@ -14,4 +15,4 @@ HEADERS += \
     src/attachment.h \
     src/messages.h
 
-LIBS += -lcurl
+LIBS += -L../../../curl-8.2.1_5-win64-mingw/lib -lcurl

@@ -53,7 +53,7 @@ protected:
 
 public:
 
-    Client(const std::string _version = "5.65",
+    Client(const std::string _version = "5.82",
            const std::string _lang = "en",
            const callback_func_cap cap_callback = nullptr,
            const callback_func_fa2 _fa2_callback = nullptr);

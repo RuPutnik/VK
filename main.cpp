@@ -45,7 +45,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-
     VK::Client api;
     api.set_fa2_callback(fa2_callback);
     api.set_cap_callback(captcha_callback);
@@ -54,11 +53,17 @@ int main(int argc, char *argv[]) {
         cout << "Access token: " << api.access_token() << endl;
         
         VK::params_map params = {
-            {"owner_id", "134575353"},
-            {"message", "Hello from VK API"}
+            {"owner_id", "59644914"},
+            {"message", "Hello from VK API"},
+            {"close_comments", "1"}
+        };
+        VK::params_map params1 = {
+            {"screen_name", "rumyancev13"}
         };
         cout << "API response: " << endl;
-        cout << api.call("wall.post", params) << endl;
+       // cout << api.call("wall.post", params) << endl;
+
+        cout << api.call("utils.resolveScreenName", params1) << endl;
         /* alternative method
         api.call("wall.post", "owner_id=134575353&message=Hello from VK API");
         */
